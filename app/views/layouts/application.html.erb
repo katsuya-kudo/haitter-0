@@ -12,9 +12,15 @@
   <header>
     <%=link_to("Haitter","/") %>
     <%=link_to("Haitterとは","/about") %>
-    <%=link_to("新規登録","/users/new") %>
-    <%=link_to("ログイン","/users/login_form") %>
+    <%=link_to("新規登録","/signup") %>
+    <%=link_to("ログイン","/login") %>
   </header>
+  
+  <% if flash[:notice] %>
+  
+  <%= flash[:notice] %>
+  
+  <% end %>
 
   <body>
     <%= yield %>
