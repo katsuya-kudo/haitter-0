@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get 'users/:id' => 'users#show'
   get 'users/question' => 'users#question'
   get 'users/delete' => 'users#delete'
+  post 'login' => 'users#login'
   get 'login' => 'users#login_form'
+  post 'logout' => 'users#logout'
   
   get 'posts/index' => 'posts#index'
   get 'posts/new' => 'posts#new'
