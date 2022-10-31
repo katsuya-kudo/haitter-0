@@ -1,4 +1,8 @@
 <h1>ユーザー情報</h1>
+<% @users.each do |user| %>
+<img src="<%="/user_images/#{user.image_name}"%>">
+<% end %>
+
 <p>name:</p>
 <p>adderss:</p>
 
