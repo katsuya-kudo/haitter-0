@@ -1,9 +1,11 @@
 <h1>Posts#index</h1>
 <p>Find me in app/views/posts/index.html.erb</p>
 
-<%= @posts.each do |post| %>
+<% @posts.each do |post| %>
 
-<%= link_to(post.content, "/posts/#{post.id}") %>
+<img src="<%= "/user_images/#{post.user.image_name}" %>">
+
+<%= link_to(post.title, "/posts/#{post.id}") %>
 
 
 <% end %>

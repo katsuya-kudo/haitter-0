@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user
+  before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
   
   def index
     @posts = Post.all.order(created_at: :desc)
@@ -14,7 +15,7 @@ class PostsController < ApplicationController
   end
   
   def create
-    @post = Post.new(content: params[:content],user_id: @current_user.id)
+    @post = Post.new(title: params[:title],content: params[:content],user_id: @current_user.id)
     if @post.save
       flash[:notice] = "投稿を作成しました"
     redirect_to("/posts/index")
@@ -25,7 +26,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id: params[:id])
-    @user = User.find_by(id: @post.user_id)
+    puts @post.title
     puts @post.content
   end
 
@@ -35,6 +36,7 @@ class PostsController < ApplicationController
   
   def update
     @post = Post.find_by(id: params[:id])
+    @post.title = params[:title]
     @post.content = params[:content]
     if @post.save
       flash[:notice] = "投稿を編集しました"

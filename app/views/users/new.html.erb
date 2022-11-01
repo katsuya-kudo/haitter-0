@@ -10,7 +10,12 @@
     <input name="email">
     <p>パスワード</p>
     <input type="password" name="password">
+    <p>パスワード再確認</p>
+    <input type="password" name="password_confirmation">
     <p>住んでいる地域</p>
-    <select><option>八森地区</option><option>峰浜地区</option></select> 
+    <select name="district">
+     <option value="八森地区">八森地区</option>
+     <option value="峰浜地区">峰浜地区</option>
+    </select> 
     <input type="submit" value="新規登録">
   <% end %>

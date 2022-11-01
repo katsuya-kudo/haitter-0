@@ -4,6 +4,8 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :user_name
       t.string :email
       t.string :password_digest
+      t.string :image_name
+      t.string :district
       t.datetime :created_at
       t.datetime :updated_at
 
