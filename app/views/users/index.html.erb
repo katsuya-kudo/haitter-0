@@ -2,12 +2,7 @@
 <% @users.each do |user| %>
 <img src="<%="/user_images/#{user.image_name}"%>">
 
-<p>name:</p>
-<p>adderss:</p>
-
-<h2>投稿一覧</h2>
+<%= user.user_name %>
 
 <% end %>
 
-<%= link_to("問い合わせ","#") %>
-<%= link_to("退会はこちら","#") %>

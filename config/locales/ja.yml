@@ -7,4 +7,10 @@ ja:
         password_confirmation: "パスワード確認"
         email: "メールアドレス"
         user_name: "名前"
-
+        User_name: "名前"
+        Email: "メールアドレス"
+        Content: "内容"
+        
+        
+        
+        

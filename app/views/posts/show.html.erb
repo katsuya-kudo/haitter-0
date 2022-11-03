@@ -5,6 +5,14 @@
 <%= @post.title %>
 <%= @post.content %>
 <%= @post.created_at.strftime('%Y/%m/%d %H:%M:%S') %>
+
+<% if Haittum. find_by(user_id: @current_user.id,post_id: @post.id) %>
+<%= link_to("はいった！","/haittum/#{@post.id}/destroy",{method: "post"}) %>
+<% else %>
+<%= link_to("はいった","/haittum/#{@post.id}/create",{method: "post"}) %>
+<% end %>
+<%= @haittum_count %>
+
 <% if @post.user_id == @current_user.id %>
 <%=link_to("編集","/posts/#{@post.id}/edit") %> <%= link_to("削除","/posts/#{@post.id}/destroy",{method:"post"}) %>
 <% end %>

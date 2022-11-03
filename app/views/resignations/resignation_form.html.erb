@@ -1,0 +1,16 @@
+
+<% @resignation.errors.full_messages.each do |message| %>
+ <%= message %>
+  <% end %>
+
+<%= form_tag("/resignation") do %>
+<p>退会理由</p>
+<input name="reason">
+<p>登録名</p>
+<input name="user_name">
+<p>登録アドレス</p>
+<input name="email">
+<p>パスワード</p>
+<input type="password" name="password">
+<input type="submit" value="退会を申請する">
+<% end %>

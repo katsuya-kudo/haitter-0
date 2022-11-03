@@ -1,0 +1,2 @@
+module ResignatonsHelper
+end
