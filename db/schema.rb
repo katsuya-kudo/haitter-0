@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_03_125742) do
+ActiveRecord::Schema.define(version: 2022_11_03_142445) do
 
   create_table "haitta", force: :cascade do |t|
     t.integer "user_id"
@@ -37,8 +37,12 @@ ActiveRecord::Schema.define(version: 2022_11_03_125742) do
 
   create_table "resignations", force: :cascade do |t|
     t.text "reason"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "user_name"
+    t.string "email"
+    t.string "password"
+    t.integer "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|

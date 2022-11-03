@@ -1,4 +1,4 @@
-class ResignationsController < ApplicationController
+class ResignationController < ApplicationController
   
   def resignation
     @resignation = Resignation.new(reason: params[:reason],
