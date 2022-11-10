@@ -1,10 +1,10 @@
-<h1>Inquiry#form</h1>
-<p>Find me in app/views/inquiry/inquiry_form:.html.erb</p>
-
+<h1>お問い合わせ</h1>
+<div class="inquiry-errors">
 <% @inquiry.errors.full_messages.each do |message| %>
  <%= message %>
   <% end %>
-  
+  </div>
+ <div class="inquiry-form">
 <%= form_tag("/inquiry") do %>
 <p>お名前</p>
 <input name="user_name">
@@ -12,5 +12,8 @@
 <input name="email">
 <p>お問合せ内容</p>
 <textarea name="content"></textarea>
+<br>
+<br>
 <input type="submit" value="送信">
 <% end %>
+</div>

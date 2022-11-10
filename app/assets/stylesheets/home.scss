@@ -1,3 +1,32 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+    font-family: serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-family: YuMincho;
+    font-size: 25px;
+    text-align: center;
+}
+
+h3 {
+    font-family: YuNincho;
+    font-size: 25px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.images-item {
+    float: left;
+    width: 30%;
+    padding: 20px 20px;
+    magin: 20px 20px;
+}

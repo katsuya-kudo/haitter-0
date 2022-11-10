@@ -1,13 +1,13 @@
 <h1>ユーザー情報</h1>
 
-<img src="<%="/user_images/#{@user.image_name}"%>">
+
 
 <p><%= @user.user_name %></p>
 
 <p><%= @user.email %></p>
 
+<div class="users-show">
 <% if @user.id == @current_user.id %>
 <%= link_to("編集", "/users/#{@user.id}/edit") %>
 <% end %>
-
-
+</div>

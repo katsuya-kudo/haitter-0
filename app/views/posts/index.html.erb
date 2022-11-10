@@ -1,16 +1,15 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-
-
+<h1>みんなのつぶやき</h1>
+<div class="posts-index">
 <% @posts.each do |post| %>
-
-<img src="<%= "/user_images/#{post.user.image_name}" %>">
-
-<%= link_to(post.title, "/posts/#{post.id}") %>
-
-
+<p><%= link_to(post.title, "/posts/#{post.id}") %></p>
 <% end %>
-
-
+</div>
+<br>
+<br>
+<div class="contact">
 <%= link_to("問い合わせ","/inquiry") %>
+<br>
+<br>
 <%= link_to("退会はこちら","/resignation") %>
+</div>
+

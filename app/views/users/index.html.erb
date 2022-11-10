@@ -1,8 +1,7 @@
 <h1>ユーザー情報</h1>
+<div class="users-all-index">
 <% @users.each do |user| %>
-<img src="<%="/user_images/#{user.image_name}"%>">
-
-<%= user.user_name %>
-
+<p><%= user.user_name %></p>
 <% end %>
+</div>
 

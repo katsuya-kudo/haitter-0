@@ -1,10 +1,16 @@
 <h1>編集する</h1>
+    <div class="posts-edit">
     <%= form_tag("/posts/#{@post.id}/update") do %>
         <% @post.errors.full_messages.each do |message| %>
             <%= message %>
         <% end %>
+        <p>題名</p>
         <input name="title" value="<%= @post.title %>">
+        <br>
+        <p>内容</p>
         <textarea name="content"><%= @post.content %></textarea>
+        <br>
+        <br>
         <input type="submit" value="保存">
     <% end %>
-
+    </div>
