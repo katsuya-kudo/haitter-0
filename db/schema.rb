@@ -20,8 +20,7 @@ ActiveRecord::Schema.define(version: 2022_11_03_142445) do
   end
 
   create_table "inquiries", force: :cascade do |t|
-    t.string "user_name"
-    t.string "email"
+    t.integer "user_id"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,9 +36,6 @@ ActiveRecord::Schema.define(version: 2022_11_03_142445) do
 
   create_table "resignations", force: :cascade do |t|
     t.text "reason"
-    t.string "user_name"
-    t.string "email"
-    t.string "password"
     t.integer "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

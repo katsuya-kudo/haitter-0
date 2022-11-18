@@ -2,12 +2,11 @@ class ResignationController < ApplicationController
   
   def resignation
     @resignation = Resignation.new(reason: params[:reason],
-                    user_name: params[:user_name],
-                    email: params[:email],
-                    password: params[:password])
+                                    user_id: @current_user.id)
+                    
     if @resignation.save
-        flash[:notice] = "退会申請を受け付けました"
-    redirect_to("/")
+      
+      redirect_to("/resignation_destroy_form")
     else
       render("resignation_form")
     end
@@ -15,6 +14,17 @@ class ResignationController < ApplicationController
   
   def resignation_form
     @resignation = Resignation.new
+  end
+  
+  def resignation_destroy_form
+    @resignation = Resignation.new
+  end
+  
+  def resignation_destroy
+    
+    flash[:notice] = "退会しました"
+    
+    
   end
   
 end

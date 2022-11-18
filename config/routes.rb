@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post 'resignation_destroy' => 'resignation#resignation_destroy'
+  get 'resignation_destroy_form' => 'resignation#resignation_destroy_form'
   post 'resignation' => 'resignation#resignation'
   get 'resignation' => 'resignation#resignation_form'
   post 'inquiry' => 'inquiry#inquiry'

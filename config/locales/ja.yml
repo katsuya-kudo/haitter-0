@@ -2,15 +2,20 @@ ja:
   activerecord:
     attributes:
       user:
-        name: "表示名"
+        user_name: "名前"
         password: "パスワード"
         password_confirmation: "パスワード確認"
         email: "メールアドレス"
-        user_name: "名前"
-        User_name: "名前"
-        Email: "メールアドレス"
-        Content: "内容"
         
+      post:
+        title: "題名"
+        content: "内容"
+        
+      inquiry:
+        content: "お問い合わせ内容"
+          
+      resignation:    
+        reason: "退会理由"
         
         
         
