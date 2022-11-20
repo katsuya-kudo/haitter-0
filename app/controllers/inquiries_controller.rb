@@ -1,9 +1,9 @@
-class InquiryController < ApplicationController
+class InquiriesController < ApplicationController
   
-  def inquiry
-    @inquiry = Inquiry.new(content: params[:content],
+  def create
+    @inquiries = Inquiry.new(content: params[:content],
                             user_id: @current_user.id)
-    if @inquiry.save
+    if @inquiries.save
       flash[:notice] = "送信が完了しました"
     redirect_to("/posts/index")
     else
@@ -11,7 +11,7 @@ class InquiryController < ApplicationController
     end
   end
   
-  def inquiry_form
-    @inquiry = Inquiry.new
+  def new
+    @inquiries = Inquiry.new
   end
 end

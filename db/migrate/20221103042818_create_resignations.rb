@@ -1,4 +1,4 @@
-class CreateResignation < ActiveRecord::Migration[5.2]
+class CreateResignations < ActiveRecord::Migration[5.2]
   def change
     create_table :resignations do |t|
       t.text :reason

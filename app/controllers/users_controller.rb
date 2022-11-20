@@ -78,9 +78,9 @@ class UsersController < ApplicationController
     end
   end
   
-  def haittum
+  def haittaes
     @user = User.find_by(id: params[:id])
-    @haittum = Haittum.where(user_id: @user.id)
+    @haittaes = Haitta.where(user_id: @user.id)
   end
   
 end

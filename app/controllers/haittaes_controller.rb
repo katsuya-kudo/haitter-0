@@ -1,4 +1,4 @@
-class HaittumController < ApplicationController
+class HaittaesController < ApplicationController
     before_action :authenticate_user
     
     def create

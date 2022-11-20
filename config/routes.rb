@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
-  post 'resignation_destroy' => 'resignation#resignation_destroy'
-  get 'resignation_destroy_form' => 'resignation#resignation_destroy_form'
-  post 'resignation' => 'resignation#resignation'
-  get 'resignation' => 'resignation#resignation_form'
-  post 'inquiry' => 'inquiry#inquiry'
-  get 'inquiry' => 'inquiry#inquiry_form'
-  post 'haittum/:post_id/create' => 'haittum#create'
-  post 'haittum/:post_id/destroy' => 'haittum#destroy'
+  post 'resignations/create' => 'resignations#create'
+  get 'resi' => 'resignations#new', as: 'resi'
+  post 'inquiries/create' => 'inquiries#create'
+  get 'inqu' => 'inquiries#new', as: 'inqu'
+  post 'haittaes/:post_id/create' => 'haittaes#create'
+  post 'haittaes/:post_id/destroy' => 'haittaes#destroy'
   
   post 'users/:id/update' => 'users#update'
   get 'users/:id/edit' => 'users#edit'

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class InquiryControllerTest < ActionDispatch::IntegrationTest
+class InquiriesControllerTest < ActionDispatch::IntegrationTest
   test "should get user_name:" do
     get inquiry_user_name:_url
     assert_response :success

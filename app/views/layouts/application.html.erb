@@ -46,4 +46,14 @@
   <body>
     <%= yield %>
   </body>
+  <% if @current_user %>
+  <footer>
+    <br>
+    <br>
+    <%= link_to("問い合わせ",inqu_path) %>
+<br>
+<br>
+<%= link_to("退会はこちら",resi_path) %>
+    </footer>
+    <% end %>
 </html>
