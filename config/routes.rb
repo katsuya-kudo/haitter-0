@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  post 'resignations/create' => 'resignations#create'
-  get 'resi' => 'resignations#new', as: 'resi'
+  post 'resign/create' => 'resignations#create', as: 'resign_create'
+  get 'resign' => 'resignations#new', as: 'resign'
   post 'inquiries/create' => 'inquiries#create'
   get 'inqu' => 'inquiries#new', as: 'inqu'
   post 'haittaes/:post_id/create' => 'haittaes#create'

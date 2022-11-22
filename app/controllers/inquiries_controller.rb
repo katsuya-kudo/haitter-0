@@ -7,7 +7,7 @@ class InquiriesController < ApplicationController
       flash[:notice] = "送信が完了しました"
     redirect_to("/posts/index")
     else
-      render("inquiry_form")
+      render("inquiries/new")
     end
   end
   

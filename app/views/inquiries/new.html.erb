@@ -1,11 +1,11 @@
 <h1>お問い合わせ</h1>
 <div class="inquiry-errors">
-<% @inquiry.errors.full_messages.each do |message| %>
+<% @inquiries.errors.full_messages.each do |message| %>
  <%= message %>
   <% end %>
   </div>
  <div class="inquiry-form">
-<%= form_tag("/inquiry") do %>
+<%= form_tag("/inquiries/create") do %>
 <p>お問合せ内容</p>
 <textarea name="content"></textarea>
 <br>

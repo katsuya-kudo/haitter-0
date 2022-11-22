@@ -1,14 +1,15 @@
 <div class="resignation-errors">
-<% @resignation.errors.full_messages.each do |message| %>
+<% @resignations.errors.full_messages.each do |message| %>
  <%= message %>
-  <% end %>
- </div>
+ <% end %>
+</div>
+
+<br>
+<br>
+<%= form_for @resignations, url: resign_create_path do |f| %>
 <div class="resignation-form">
-<%= form_tag("/resignation") do %>
-<p>退会理由</p>
-<input name="reason">
-<br>
-<br>
-<input class="p" type="submit" value="退会を申請する">
+  <%= f.label :reason, "退会理由" %>
+  <%= f.text_field :reason %>
+  <%= f.submit "退会を申請する", class: "p" %>
 <% end %>
 </div>
