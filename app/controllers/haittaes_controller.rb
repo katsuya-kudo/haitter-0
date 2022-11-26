@@ -2,20 +2,20 @@ class HaittaesController < ApplicationController
     before_action :authenticate_user
     
     def create
-        @haittum = Haittum.new(
+        @haittaes = Haitta.new(
                     user_id: @current_user.id,
                     post_id: params[:post_id]
                     )
-                    @haittum.save
+                    @haittaes.save
                     redirect_to("/posts/#{params[:post_id]}")
     end
     
     def destroy
-        @haittum = Haittum.find_by(
+        @haittaes = Haitta.find_by(
             user_id: @current_user.id,
             post_id: params[:post_id]
             )
-            @haittum.destroy
+            @haittaes.destroy
             redirect_to("/posts/#{params[:post_id]}")
     end
     

@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 2022_11_03_042819) do
     t.string "user_name"
     t.string "email"
     t.string "password_digest"
-    t.string "image_name"
     t.string "district"
     t.boolean "resign_flag", default: false, null: false
     t.datetime "created_at", null: false
