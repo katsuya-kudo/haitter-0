@@ -14,4 +14,10 @@ class InquiriesController < ApplicationController
   def new
     @inquiries = Inquiry.new
   end
+  
+  def index
+      @inquiries = Inquiry.all.order(created_at: :desc)
+  end
+  
+  
 end

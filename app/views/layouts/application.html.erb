@@ -30,6 +30,11 @@
     <%=link_to("新規投稿","/posts/new") %>
     <%=link_to("ログアウト","/logout",{method: "post"}) %>
     
+    <% if @current_user.admin_flag %>
+    <%= link_to("ユーザー一覧","/users/all/index") %>
+    <%= link_to("問い合わせ一覧","/inquiries/index") %>
+    <% end %>
+    
     <% else %>
     <%=link_to("Haitterとは","/about") %>
     <%=link_to("新規登録","/signup") %>

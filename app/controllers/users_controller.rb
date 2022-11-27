@@ -50,12 +50,12 @@ class UsersController < ApplicationController
   
   def login
     @user = User.find_by(email: params[:email])
-    if @user.resign_flag == false && @user.authenticate(params[:password])
+    if @user && @user.resign_flag == false && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       flash[:notice] = "ログインしました"
       redirect_to("/posts/index")
     else
-      if @user.resign_flag == true
+      if @user && @user.resign_flag == true
         @error_message = "退会済みのユーザーです"
       else
         @error_message = "メールアドレスまたはパスワードが間違っています"
@@ -83,9 +83,9 @@ class UsersController < ApplicationController
     end
   end
   
-  def haittaes
+  def haittum
     @user = User.find_by(id: params[:id])
-    @haittaes = Haitta.where(user_id: @user.id)
+    @haittum = Haittum.where(user_id: @user.id)
   end
   
 end

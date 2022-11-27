@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_03_042819) do
+ActiveRecord::Schema.define(version: 2022_11_27_070233) do
 
-  create_table "haittaes", force: :cascade do |t|
+  create_table "haitta", force: :cascade do |t|
     t.integer "user_id"
     t.integer "post_id"
     t.datetime "created_at", null: false
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2022_11_03_042819) do
     t.string "password_digest"
     t.string "district"
     t.boolean "resign_flag", default: false, null: false
+    t.boolean "admin_flag", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

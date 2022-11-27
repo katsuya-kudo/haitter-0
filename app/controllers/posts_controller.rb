@@ -28,7 +28,7 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     puts @post.title
     puts @post.content
-    #@haittaes_count = Haitta.where(post_id: @post.id).count
+    @haittum_count = Haittum.where(post_id: @post.id).count
   end
 
   def edit

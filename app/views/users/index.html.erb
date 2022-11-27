@@ -1,7 +1,11 @@
 <h1>ユーザー情報</h1>
 <div class="users-all-index">
 <% @users.each do |user| %>
-<p><%= user.user_name %></p>
+<p>ユーザーID:<%= user.id %></p>
+<p>ユーザーネーム：<%= user.user_name %></p>
+<p>登録EMAILアドレス:<%= user.email %></p>
+<p>登録地区：<%= user.district %></p>
+<br>
 <% end %>
 </div>
 
