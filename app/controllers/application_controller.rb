@@ -18,5 +18,13 @@ class ApplicationController < ActionController::Base
             redirect_to("/posts/index")
         end
     end
-            
+    
+    def forbid_admin_flag_false_user
+        @admin_flag_false_user = User.find_by(admin_flag: false)
+        if @current_user == @admin_flag_false_user
+            flash[:notice] = "権限がありません"
+            redirect_to("/posts/index")
+        end
+    end
+    
 end

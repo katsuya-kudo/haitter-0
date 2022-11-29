@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'inquiries/index' => 'inquiries#index'
   post 'inquiries/create' => 'inquiries#create'
   get 'inqu' => 'inquiries#new', as: 'inqu'
+  post 'inquiries/destroy' => 'inquiries#destroy'
   
   post 'haittum/:post_id/create' => 'haittum#create'
   post 'haittum/:post_id/destroy' => 'haittum#destroy'

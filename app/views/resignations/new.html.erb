@@ -3,13 +3,20 @@
  <%= message %>
  <% end %>
 </div>
-
-<br>
-<br>
-<%= form_for @resignations, url: resign_create_path do |f| %>
+<div class="title">
+<h1>退会申請</h1>
+</div>
 <div class="resignation-form">
+    
+<%= form_for @resignations, url: resign_create_path do |f| %>
+
   <%= f.label :reason, "退会理由" %>
+  <br>
+  <br>
   <%= f.text_field :reason %>
+  <br>
+  <br>
   <%= f.submit "退会を申請する", class: "p" %>
+  
 <% end %>
 </div>
