@@ -1,12 +1,18 @@
 <h1>問い合わせ一覧</h1>
 
 <div class="inquiries">
- <%= form_tag("/inquiries/destroy") do %>
+ 
 <% @inquiries.each do |inquiry| %>
-<p name="id">ユーザーID：<%= inquiry.user_id %></p>
-<p name="content">内容：<%= inquiry.content %></p>
-<p name="created_at">投稿時間： <%= inquiry.created_at.strftime('%Y/%m/%d %H:%M:%S') %></p>
-<input type="submit"  name="inqu" value="対応完了">  
+
+<%= form_for :inquiry, url: delete_inquiry_path(inquiry.id) do |f| %>
+
+
+<p> ユーザーネーム：<%= inquiry.user.user_name %></p>
+<p>ユーザーアドレス：<%= inquiry.user.email %></p>
+<p>内容：<%= inquiry.content %></p>
+<p>投稿時間： <%= inquiry.created_at.strftime('%Y/%m/%d %H:%M:%S') %></p>
+<input type="submit" value="対応完了">
+
 <% end %>
 <br>
 <% end %>

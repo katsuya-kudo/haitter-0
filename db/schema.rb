@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2022_11_27_070233) do
   create_table "inquiries", force: :cascade do |t|
     t.integer "user_id"
     t.text "content"
+    t.boolean "resolve_flag", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
