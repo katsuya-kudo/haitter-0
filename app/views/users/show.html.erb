@@ -8,6 +8,16 @@
 
 <div class="users-show">
 <% if @user.id == @current_user.id %>
+自分の問い合わせ
+<% @user.inquiries.each do |inquiry| %>
+    <% if inquiry.resolve_flag == false %>
+    <P><%= inquiry.content %></P>
+    <% else %>
+    <p><s><%= inquiry.content %></s></p>
+        <% end %>
+<% end %>
+<br>
+<br>
 <%= link_to("編集", "/users/#{@user.id}/edit") %>
 <% end %>
 </div>

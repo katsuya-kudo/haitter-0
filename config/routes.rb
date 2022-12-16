@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'inquiries/index' => 'inquiries#index'
   post 'inquiries/create' => 'inquiries#create'
   get 'inqu' => 'inquiries#new', as: 'inqu'
-  post 'inquiries/destroy/:id' => 'inquiries#destroy', as: 'delete_inquiry'
+  delete 'inquiries/destroy/:id' => 'inquiries#destroy', as: 'delete_inquiry'
   
   post 'haittum/:post_id/create' => 'haittum#create'
   post 'haittum/:post_id/destroy' => 'haittum#destroy'
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get 'posts/index' => 'posts#index'
   get 'posts/api' => 'posts#api'
   get 'posts/new' => 'posts#new'
-  post 'posts/create' => 'posts#create'
+  post 'posts/create' => 'posts#create', as: 'post_create'
   get 'posts/:id' => 'posts#show'
   get 'posts/:id/edit' => 'posts#edit'
   post 'posts/:id/update' => 'posts#update'

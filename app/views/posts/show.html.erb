@@ -3,6 +3,9 @@
 <p><%= link_to(@post.user.user_name,"/users/#{@post.user.id}") %></p>
 <%= @post.title %>
 <%= @post.content %>
+<% @post.images.each do |image| %>
+<%= image_tag image.image.url, size: "300x150" %>
+<% end %>
 <%= @post.created_at.strftime('%Y/%m/%d %H:%M:%S') %>
 
 <% if Haittum.find_by(user_id: @current_user.id,post_id: @post.id) %>

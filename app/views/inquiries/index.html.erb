@@ -4,7 +4,7 @@
  
 <% @inquiries.each do |inquiry| %>
 
-<%= form_for :inquiry, url: delete_inquiry_path(inquiry.id) do |f| %>
+<%= form_for :inquiry, url: delete_inquiry_path(inquiry.id), method: :delete do |f| %>
 
 
 <p> ユーザーネーム：<%= inquiry.user.user_name %></p>
