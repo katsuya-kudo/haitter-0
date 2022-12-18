@@ -7,6 +7,10 @@
 <br>
 <br>
 
-<p>災害情報</p>
+<p>警報・注意報</p>
+<% @data.each do |post| %>
+   <% if post["content"].include?("秋田県") %>
+   <p><%= post["content"] %></p>
+   <% end %>
+<% end %>
 
-<p>台風１５号　接近　八峰町の予想降雨量250mm</p>

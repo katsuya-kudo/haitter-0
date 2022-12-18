@@ -1,7 +1,9 @@
-<h1>Posts#api</h1>
-<p>Find me in app/views/posts/api.html.erb</p>
+<h1>お住まいの地域の警報・注意報</h1>
+
 <div class="posts-api">
-    
-    
-    
+   <% @data.each do |post| %>
+   <% if post["content"].include?(@current_user.district) %>
+   <p><%= post["content"] %></p>
+   <% end %>
+<% end %>
 </div>
